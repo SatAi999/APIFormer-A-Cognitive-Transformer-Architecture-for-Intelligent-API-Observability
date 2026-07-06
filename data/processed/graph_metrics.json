@@ -1,0 +1,47 @@
+{
+  "POST /api/v1/auth/login": {
+    "pagerank": 0.059494520456553526,
+    "in_degree": 1833.0,
+    "out_degree": 3481.0
+  },
+  "POST /internal/v1/auth/login": {
+    "pagerank": 0.0562258359384074,
+    "in_degree": 1608.0,
+    "out_degree": 804.0
+  },
+  "POST /api/v1/checkout": {
+    "pagerank": 0.11063814111737921,
+    "in_degree": 901.0,
+    "out_degree": 1802.0
+  },
+  "POST /internal/v1/payments/charge": {
+    "pagerank": 0.1209586700531678,
+    "in_degree": 1688.0,
+    "out_degree": 804.0
+  },
+  "GET /api/v1/products": {
+    "pagerank": 0.08123852956510064,
+    "in_degree": 844.0,
+    "out_degree": 844.0
+  },
+  "GET /api/v1/products/{id}": {
+    "pagerank": 0.3119269815382618,
+    "in_degree": 4059.0,
+    "out_degree": 4059.0
+  },
+  "POST /api/v1/cart": {
+    "pagerank": 0.08799701499825846,
+    "in_degree": 844.0,
+    "out_degree": 844.0
+  },
+  "POST /api/v1/invoices/generate": {
+    "pagerank": 0.13567996359252882,
+    "in_degree": 804.0,
+    "out_degree": 0.0
+  },
+  "GET /api/v1/admin/dashboard": {
+    "pagerank": 0.03584034274034234,
+    "in_degree": 57.0,
+    "out_degree": 0.0
+  }
+}

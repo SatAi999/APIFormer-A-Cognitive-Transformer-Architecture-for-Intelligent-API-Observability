@@ -1,0 +1,22 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Testing and local dev
+.pytest_cache/
+.coverage
+htmlcov/
+.env
+.venv/
+venv/
+ENV/
+
+# IDE files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp

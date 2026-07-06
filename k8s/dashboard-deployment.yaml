@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apiformer-dashboard-deployment
+  labels:
+    app: apiformer-dashboard
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: apiformer-dashboard
+  template:
+    metadata:
+      labels:
+        app: apiformer-dashboard
+    spec:
+      containers:
+      - name: dashboard
+        image: apiformer-api:latest
+        imagePullPolicy: Never
+        command: ["streamlit", "run", "src/visualization/dashboard.py", "--server.port=8501", "--server.address=0.0.0.0"]
+        ports:
+        - containerPort: 8501
+        resources:
+          limits:
+            cpu: "0.5"
+            memory: "512Mi"
+          requests:
+            cpu: "0.2"
+            memory: "256Mi"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dashboard-service
+spec:
+  selector:
+    app: apiformer-dashboard
+  ports:
+    - protocol: TCP
+      port: 8501
+      targetPort: 8501
+  type: ClusterIP

@@ -1,0 +1,94 @@
+{
+  "endpoint": {
+    "[PAD]": 0,
+    "[UNK]": 1,
+    "[MASK]": 2,
+    "[CLS]": 3,
+    "[SEP]": 4,
+    "/api/v1/admin/dashboard": 5,
+    "/api/v1/auth/login": 6,
+    "/api/v1/cart": 7,
+    "/api/v1/checkout": 8,
+    "/api/v1/invoices/generate": 9,
+    "/api/v1/products": 10,
+    "/api/v1/products/{id}": 11,
+    "/internal/v1/auth/login": 12,
+    "/internal/v1/payments/charge": 13
+  },
+  "method": {
+    "[PAD]": 0,
+    "[UNK]": 1,
+    "[MASK]": 2,
+    "[CLS]": 3,
+    "[SEP]": 4,
+    "GET": 5,
+    "POST": 6
+  },
+  "status": {
+    "[PAD]": 0,
+    "[UNK]": 1,
+    "[MASK]": 2,
+    "[CLS]": 3,
+    "[SEP]": 4,
+    "200": 5,
+    "201": 6,
+    "401": 7,
+    "403": 8,
+    "500": 9,
+    "503": 10
+  },
+  "service": {
+    "[PAD]": 0,
+    "[UNK]": 1,
+    "[MASK]": 2,
+    "[CLS]": 3,
+    "[SEP]": 4,
+    "auth-service": 5,
+    "gateway": 6,
+    "payment-service": 7
+  },
+  "device": {
+    "[PAD]": 0,
+    "[UNK]": 1,
+    "[MASK]": 2,
+    "[CLS]": 3,
+    "[SEP]": 4,
+    "bot-agent": 5,
+    "desktop-chrome": 6,
+    "desktop-safari": 7,
+    "internal": 8,
+    "mobile-android": 9,
+    "mobile-ios": 10
+  },
+  "location": {
+    "[PAD]": 0,
+    "[UNK]": 1,
+    "[MASK]": 2,
+    "[CLS]": 3,
+    "[SEP]": 4,
+    "AP-South": 5,
+    "CN-East": 6,
+    "EU-Central": 7,
+    "US-East": 8,
+    "US-West": 9
+  },
+  "env": {
+    "[PAD]": 0,
+    "[UNK]": 1,
+    "[MASK]": 2,
+    "[CLS]": 3,
+    "[SEP]": 4,
+    "production": 5,
+    "staging": 6
+  },
+  "auth": {
+    "[PAD]": 0,
+    "[UNK]": 1,
+    "[MASK]": 2,
+    "[CLS]": 3,
+    "[SEP]": 4,
+    "Bearer": 5,
+    "Internal-Key": 6,
+    "None": 7
+  }
+}

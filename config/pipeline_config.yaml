@@ -1,0 +1,39 @@
+# APIFormer+ Unified Data Pipeline Configuration
+
+generator:
+  num_sessions: 1000
+  seed: 42
+  normal_ratio: 0.8  # 80% normal traffic, 20% abnormal/attacks
+  anomaly_distribution:
+    503_cascade: 0.25
+    credential_stuffing: 0.25
+    bot_scraping: 0.25
+    sequence_abuse: 0.25
+  latency:
+    mu: 4.8         # Log-normal mu (median approx 120ms)
+    sigma: 0.6      # Log-normal sigma
+    timeout_threshold: 5000.0  # ms
+  payload_size:
+    min_bytes: 100
+    max_bytes: 1000000
+
+session_builder:
+  idle_timeout_seconds: 1800  # 30 minutes for user inactivity split
+  max_sequence_length: 128    # Max sequence length for Transformer context
+
+tokenizer:
+  mask_token: "[MASK]"
+  pad_token: "[PAD]"
+  unk_token: "[UNK]"
+  cls_token: "[CLS]"
+  sep_token: "[SEP]"
+  variable_regexes:
+    - '\b[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\b' # UUID
+    - '\b\d+\b' # Numeric IDs
+
+output:
+  export_dir: "./data/processed"
+  formats:
+    - json
+    - csv
+    - parquet
